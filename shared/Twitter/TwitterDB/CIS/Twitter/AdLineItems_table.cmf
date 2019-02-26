@@ -1,0 +1,249 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<metadata name="AdLineItems" path="/shared/Twitter/TwitterDB/CIS/Twitter/AdLineItems" type="TABLE" subtype="DATABASE_TABLE" changeToken="0" tableType="VIEW">
+  <annotation>AdLineItems</annotation>
+  <columns>
+    <column name="Id" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(255)" subType="DATASOURCE_TYPE" type="STRING" maxLength="255"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>The unique line item Id. Used to identify a specific line item.</annotation>
+    </column>
+    <column name="AccountId" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(2000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="2000"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>The identifier for the leveraged account.</annotation>
+    </column>
+    <column name="CampaignId" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(2000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="2000"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>The Id of the campaign to work with.</annotation>
+    </column>
+    <column name="Name" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(2000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="2000"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>A name assigned to the line item. If left blank, the name will default to Untitled.</annotation>
+    </column>
+    <column name="TotalBudget" nullable="true">
+      <datatype name="BIGINT" extendedName="BIGINT" subType="DATASOURCE_TYPE" type="INTEGER"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>An number representing the bid amount associated with this line item. The currency associated with the specified funding instrument will be used. For USD, $1.50 is encoded as 1.50*1e6, or 1,500,000. </annotation>
+    </column>
+    <column name="BidType" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(2000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="2000"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>The bidding mechanism.</annotation>
+    </column>
+    <column name="AutomaticallySelectBid" nullable="true">
+      <datatype name="BIT" extendedName="BIT" subType="DATASOURCE_TYPE" type="BOOLEAN"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>This boolean parameter, when set to true, will automatically optimize bidding based on daily budget and campaign flight dates. </annotation>
+    </column>
+    <column name="ProductType" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(2000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="2000"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>The type of promoted product that this line item will contain.</annotation>
+    </column>
+    <column name="Placements" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(2000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="2000"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>The comma-separated list of placement locations for this line item to display in. </annotation>
+    </column>
+    <column name="Objective" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(2000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="2000"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>The campaign objective for this line item. </annotation>
+    </column>
+    <column name="EntityStatus" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(2000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="2000"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>The status for this entity: ACTIVE, DRAFT, and PAUSED.</annotation>
+    </column>
+    <column name="IncludeSentiment" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(2000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="2000"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>Whether this line item is targeted to tweets with both positive or negative sentiment. A tweet is said to have positive or negative sentiment if the tone of the tweet is positive. This is only valid for the ProductType of PROMOTED_TWEETS and with either placements of ALL_ON_TWITTER or TWITTER_TIMELINES. Possible values: POSITIVE_ONLY (default) targets only tweets with positive sentiment;  ALL targets all tweets, including those with negative sentiment.</annotation>
+    </column>
+    <column name="TotalBudgetAmountLocalMicro" nullable="true">
+      <datatype name="BIGINT" extendedName="BIGINT" subType="DATASOURCE_TYPE" type="INTEGER"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>An number representing the total budget amount to be allocated to the line item. The currency associated with the specified funding instrument and campaign will be used. For USD, $37.50 is encoded as 37.50*1e6, or 37,500,000.</annotation>
+    </column>
+    <column name="StartTime" nullable="true">
+      <datatype name="TIMESTAMP" extendedName="TIMESTAMP" subType="DATASOURCE_TYPE" type="DATETIME"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>The UTC time that the line item will begin serving. Must be more recent than the current time. </annotation>
+    </column>
+    <column name="EndTime" nullable="true">
+      <datatype name="TIMESTAMP" extendedName="TIMESTAMP" subType="DATASOURCE_TYPE" type="DATETIME"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>The UTC time that the line item will stop serving. If specified, must be more recent than the StartTime of the line item. </annotation>
+    </column>
+    <column name="PrimaryWebEventTag" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(2000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="2000"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>The identifier of the primary Web event tag. Allows more accurate tracking of engagements for the campaign pertaining to this line item. </annotation>
+    </column>
+    <column name="Optimization" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(2000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="2000"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>The optimization setting to use on this ad group (line item). </annotation>
+    </column>
+    <column name="BidUnit" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(2000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="2000"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>This field is returned for line items using the APP_INSTALLS objective. Defaults to bid unit based on objective. </annotation>
+    </column>
+    <column name="ChargeBy" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(2000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="2000"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>This field is returned for line items using the APP_INSTALLS objective. Defaults to charging by bid unit except for line items with bid unit APP_INSTALLS, where it defaults to charging by app clicks. </annotation>
+    </column>
+    <column name="AdvertiserDomain" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(2000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="2000"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>The website domain for this advertiser, without protocol specification. This field is available for line items using the Twitter Audience Platform (TAP).</annotation>
+    </column>
+    <column name="Categories" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(2000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="2000"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>The relevant IAB categories for this advertiser. This setting is available for line items using the Twitter Audience Platform (TAP). </annotation>
+    </column>
+    <column name="TargetCPALocalMicro" nullable="true">
+      <datatype name="INT" extendedName="INT" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>An integer representing the target CPA amount to be allocated to the line item. The currency associated with the specified funding instrument and campaign will be used. For USD, $5.50 is encoded as 5.50*1e6, or 5,500,000. </annotation>
+    </column>
+    <column name="CreatedAt" nullable="true">
+      <datatype name="TIMESTAMP" extendedName="TIMESTAMP" subType="DATASOURCE_TYPE" type="DATETIME"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>The time when the campaign was created.</annotation>
+    </column>
+    <column name="UpdatedAt" nullable="true">
+      <datatype name="TIMESTAMP" extendedName="TIMESTAMP" subType="DATASOURCE_TYPE" type="DATETIME"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>The time of the last change of the properties of this campaign.</annotation>
+    </column>
+    <column name="IncludeDeleted" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(2000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="2000"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>Boolean used for including or not the deleted accounts.</annotation>
+    </column>
+  </columns>
+  <indexes>
+    <index name="ADLINEITEMS_PRIMARYKEY" type="PRIMARY_KEY" unique="true">
+      <indexColumn name="Id" sortOrder="ASCENDING"/>
+    </index>
+  </indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="admin" domain="composite"/>
+  </security>
+  <attribute name="c:0:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:10:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:11:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:12:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:13:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:14:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:15:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:16:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:17:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:18:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:19:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:1:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:20:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:21:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:22:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:23:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:24:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:2:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:3:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:4:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:5:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:6:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:7:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:8:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:9:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="creationDate" type="LONG">1550474600209</attribute>
+  <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+  <attribute name="creatorUserId" type="INTEGER">-1973</attribute>
+  <attribute name="creatorUserName" type="STRING">admin</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1550474600209</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">composite</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">-1973</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">admin</attribute>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1550474600209</attribute>
+</metadata>

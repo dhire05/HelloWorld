@@ -1,0 +1,65 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<metadata name="GeoSearch" path="/shared/Twitter/TwitterDB/CIS/Twitter/GeoSearch" type="PROCEDURE" subtype="DATABASE_PROCEDURE" changeToken="0">
+  <parameters>
+    <parameter name="Latitude" direction="IN" nullable="unknown">
+      <datatype name="VARCHAR" extendedName="VARCHAR(2000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="2000"/>
+    </parameter>
+    <parameter name="Longitude" direction="IN" nullable="unknown">
+      <datatype name="VARCHAR" extendedName="VARCHAR(2000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="2000"/>
+    </parameter>
+    <parameter name="IP" direction="IN" nullable="unknown">
+      <datatype name="VARCHAR" extendedName="VARCHAR(2000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="2000"/>
+    </parameter>
+    <parameter name="Accuracy" direction="IN" nullable="unknown">
+      <datatype name="VARCHAR" extendedName="VARCHAR(2000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="2000"/>
+    </parameter>
+    <parameter name="ContainedWithin" direction="IN" nullable="unknown">
+      <datatype name="VARCHAR" extendedName="VARCHAR(2000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="2000"/>
+    </parameter>
+    <parameter name="Granularity" direction="IN" nullable="unknown">
+      <datatype name="VARCHAR" extendedName="VARCHAR(2000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="2000"/>
+    </parameter>
+    <parameter name="MaxResults" direction="IN" nullable="unknown">
+      <datatype name="VARCHAR" extendedName="VARCHAR(2000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="2000"/>
+    </parameter>
+    <parameter name="Query" direction="IN" nullable="unknown">
+      <datatype name="VARCHAR" extendedName="VARCHAR(2000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="2000"/>
+    </parameter>
+    <parameter name="Id" direction="OUT" nullable="unknown">
+      <datatype name="VARCHAR" extendedName="VARCHAR(2000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="2000"/>
+    </parameter>
+    <parameter name="Name" direction="OUT" nullable="unknown">
+      <datatype name="VARCHAR" extendedName="VARCHAR(2000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="2000"/>
+    </parameter>
+    <parameter name="Country" direction="OUT" nullable="unknown">
+      <datatype name="VARCHAR" extendedName="VARCHAR(2000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="2000"/>
+    </parameter>
+    <parameter name="CountryCode" direction="OUT" nullable="unknown">
+      <datatype name="VARCHAR" extendedName="VARCHAR(2000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="2000"/>
+    </parameter>
+    <parameter name="FullName" direction="OUT" nullable="unknown">
+      <datatype name="VARCHAR" extendedName="VARCHAR(2000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="2000"/>
+    </parameter>
+    <parameter name="Latitude" direction="OUT" nullable="unknown">
+      <datatype name="VARCHAR" extendedName="VARCHAR(2000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="2000"/>
+    </parameter>
+    <parameter name="Longitude" direction="OUT" nullable="unknown">
+      <datatype name="VARCHAR" extendedName="VARCHAR(2000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="2000"/>
+    </parameter>
+    <parameter name="PlaceType" direction="OUT" nullable="unknown">
+      <datatype name="VARCHAR" extendedName="VARCHAR(2000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="2000"/>
+    </parameter>
+  </parameters>
+  <security>
+    <owner user="admin" domain="composite"/>
+  </security>
+  <attribute name="creationDate" type="LONG">1550474600228</attribute>
+  <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+  <attribute name="creatorUserId" type="INTEGER">-1973</attribute>
+  <attribute name="creatorUserName" type="STRING">admin</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1550474600228</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">composite</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">-1973</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">admin</attribute>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1550474600228</attribute>
+</metadata>

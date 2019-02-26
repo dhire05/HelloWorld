@@ -1,0 +1,35 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<metadata name="GetRemainingRequests" path="/shared/Twitter/TwitterDB/CIS/Twitter/GetRemainingRequests" type="PROCEDURE" subtype="DATABASE_PROCEDURE" changeToken="0">
+  <parameters>
+    <parameter name="Resources" direction="IN" nullable="unknown">
+      <datatype name="VARCHAR" extendedName="VARCHAR(2000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="2000"/>
+    </parameter>
+    <parameter name="Remaining_Requests" direction="OUT" nullable="unknown">
+      <datatype name="VARCHAR" extendedName="VARCHAR(2000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="2000"/>
+    </parameter>
+    <parameter name="Reset_Time" direction="OUT" nullable="unknown">
+      <datatype name="VARCHAR" extendedName="VARCHAR(2000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="2000"/>
+    </parameter>
+    <parameter name="Reset_Time_Seconds" direction="OUT" nullable="unknown">
+      <datatype name="VARCHAR" extendedName="VARCHAR(2000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="2000"/>
+    </parameter>
+    <parameter name="Limit" direction="OUT" nullable="unknown">
+      <datatype name="VARCHAR" extendedName="VARCHAR(2000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="2000"/>
+    </parameter>
+    <parameter name="Api_Request" direction="OUT" nullable="unknown">
+      <datatype name="VARCHAR" extendedName="VARCHAR(2000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="2000"/>
+    </parameter>
+  </parameters>
+  <security>
+    <owner user="admin" domain="composite"/>
+  </security>
+  <attribute name="creationDate" type="LONG">1550474600228</attribute>
+  <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+  <attribute name="creatorUserId" type="INTEGER">-1973</attribute>
+  <attribute name="creatorUserName" type="STRING">admin</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1550474600228</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">composite</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">-1973</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">admin</attribute>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1550474600228</attribute>
+</metadata>

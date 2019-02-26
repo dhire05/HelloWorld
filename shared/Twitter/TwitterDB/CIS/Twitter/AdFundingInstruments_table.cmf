@@ -1,0 +1,159 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<metadata name="AdFundingInstruments" path="/shared/Twitter/TwitterDB/CIS/Twitter/AdFundingInstruments" type="TABLE" subtype="DATABASE_TABLE" changeToken="0" tableType="VIEW">
+  <annotation>AdFundingInstruments</annotation>
+  <columns>
+    <column name="Id" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(255)" subType="DATASOURCE_TYPE" type="STRING" maxLength="255"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>Identifier for a funding instrument.</annotation>
+    </column>
+    <column name="AccountId" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(2000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="2000"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>Id of the advertising account to work with.</annotation>
+    </column>
+    <column name="Type" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(2000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="2000"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>A funding instrument can be one of the following types: Credit Cards, Credit Lines, Multi-Handle Credit Lines.</annotation>
+    </column>
+    <column name="Description" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(2000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="2000"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>Exdended info for the funding instrument.</annotation>
+    </column>
+    <column name="CreatedAt" nullable="true">
+      <datatype name="TIMESTAMP" extendedName="TIMESTAMP" subType="DATASOURCE_TYPE" type="DATETIME"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>The time when this record was created.</annotation>
+    </column>
+    <column name="UpdatedAt" nullable="true">
+      <datatype name="TIMESTAMP" extendedName="TIMESTAMP" subType="DATASOURCE_TYPE" type="DATETIME"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>The time of the last charge related to the properties of this item.</annotation>
+    </column>
+    <column name="CreditLimit" nullable="true">
+      <datatype name="BIGINT" extendedName="BIGINT" subType="DATASOURCE_TYPE" type="INTEGER"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>The credit limit in local micro.</annotation>
+    </column>
+    <column name="FundedAmount" nullable="true">
+      <datatype name="BIGINT" extendedName="BIGINT" subType="DATASOURCE_TYPE" type="INTEGER"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>The funded amount in local micro.</annotation>
+    </column>
+    <column name="CreditRemaining" nullable="true">
+      <datatype name="BIGINT" extendedName="BIGINT" subType="DATASOURCE_TYPE" type="INTEGER"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>The credit remaining in local micro.</annotation>
+    </column>
+    <column name="Currency" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(2000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="2000"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>Default currency.</annotation>
+    </column>
+    <column name="StartTime" nullable="true">
+      <datatype name="TIMESTAMP" extendedName="TIMESTAMP" subType="DATASOURCE_TYPE" type="DATETIME"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>The time when this instrument became available to use.</annotation>
+    </column>
+    <column name="EndTime" nullable="true">
+      <datatype name="TIMESTAMP" extendedName="TIMESTAMP" subType="DATASOURCE_TYPE" type="DATETIME"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>The time when this instrument stoped being available to use.</annotation>
+    </column>
+    <column name="Cancelled" nullable="true">
+      <datatype name="BIT" extendedName="BIT" subType="DATASOURCE_TYPE" type="BOOLEAN"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>Indicates if an instrument is canceled.</annotation>
+    </column>
+    <column name="Deleted" nullable="true">
+      <datatype name="BIT" extendedName="BIT" subType="DATASOURCE_TYPE" type="BOOLEAN"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>Indicates if this item is deleted and cannot be used anymore.</annotation>
+    </column>
+    <column name="IncludeDeleted" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(2000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="2000"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>Boolean used for including or not the deleted accounts.</annotation>
+    </column>
+  </columns>
+  <indexes>
+    <index name="ADFUNDINGINSTRUMENTS_PRIMARYKEY" type="PRIMARY_KEY" unique="true">
+      <indexColumn name="Id" sortOrder="ASCENDING"/>
+    </index>
+  </indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="admin" domain="composite"/>
+  </security>
+  <attribute name="c:0:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:10:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:11:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:12:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:13:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:14:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:1:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:2:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:3:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:4:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:5:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:6:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:7:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:8:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:9:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="creationDate" type="LONG">1550474600209</attribute>
+  <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+  <attribute name="creatorUserId" type="INTEGER">-1973</attribute>
+  <attribute name="creatorUserName" type="STRING">admin</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1550474600209</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">composite</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">-1973</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">admin</attribute>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1550474600209</attribute>
+</metadata>

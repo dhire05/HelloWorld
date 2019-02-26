@@ -1,0 +1,92 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<metadata name="AdInsights" path="/shared/Twitter/TwitterDB/CIS/Twitter/AdInsights" type="TABLE" subtype="DATABASE_TABLE" changeToken="0" tableType="VIEW">
+  <annotation>AdInsights</annotation>
+  <columns>
+    <column name="AccountId" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(2000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="2000"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>The Id of the advertising account to work with.</annotation>
+    </column>
+    <column name="Category" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(2000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="2000"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>The top level category of the insight. For example: network_operators, interests, or devices.</annotation>
+    </column>
+    <column name="Type" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(2000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="2000"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>This is a specific type of insight and takes values based on the parent category. For instance, for the category Devices, the type can be Android or iOS.</annotation>
+    </column>
+    <column name="Percentage" nullable="true">
+      <datatype name="DECIMAL" extendedName="DECIMAL(38,6)" subType="DATASOURCE_TYPE" type="DECIMAL" maxDigits="38" maxFractionalDigits="6"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>The percentage of the audience which is part of this category type.</annotation>
+    </column>
+    <column name="TypeValue" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(2000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="2000"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>The internal API value related to a specific audience type.</annotation>
+    </column>
+    <column name="AudienceType" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(2000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="2000"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>A group which includes certain users based on location and activity. There are three types of audiences: ALL_ON_TWITTER is an AudienceType that includes all users in the United States. ORGANIC is an AudienceType that includes the set of users who have interacted with organic content belonging to the full promotable (primary) user of the ads account. CAMPAIGN is an AudienceType that includes the set of users who have interacted with past campaigns.</annotation>
+    </column>
+    <column name="AudienceValue" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(2000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="2000"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>The identifier (Id) of the available audience set requested. Availability depends on the audience type. </annotation>
+    </column>
+    <column name="InteractionType" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(2000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="2000"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>The type of interaction captured for the available audience set requested. </annotation>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="admin" domain="composite"/>
+  </security>
+  <attribute name="c:0:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:1:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:2:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:3:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:4:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:5:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:6:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:7:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="creationDate" type="LONG">1550474600209</attribute>
+  <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+  <attribute name="creatorUserId" type="INTEGER">-1973</attribute>
+  <attribute name="creatorUserName" type="STRING">admin</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1550474600209</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">composite</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">-1973</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">admin</attribute>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1550474600209</attribute>
+</metadata>

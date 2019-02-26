@@ -1,0 +1,114 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<metadata name="AdPromotedTweets" path="/shared/Twitter/TwitterDB/CIS/Twitter/AdPromotedTweets" type="TABLE" subtype="DATABASE_TABLE" changeToken="0" tableType="VIEW">
+  <annotation>AdPromotedTweets</annotation>
+  <columns>
+    <column name="Id" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(255)" subType="DATASOURCE_TYPE" type="STRING" maxLength="255"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>The identifier corresponding to the specific promotion.</annotation>
+    </column>
+    <column name="TweetId" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(2000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="2000"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>The Id of the status update or tweet that is promoted.</annotation>
+    </column>
+    <column name="LineItemId" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(2000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="2000"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>The Id of the line item this tweet is part of.</annotation>
+    </column>
+    <column name="AccountId" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(2000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="2000"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>The Id of the advertising account to work with.</annotation>
+    </column>
+    <column name="CreatedAt" nullable="true">
+      <datatype name="TIMESTAMP" extendedName="TIMESTAMP" subType="DATASOURCE_TYPE" type="DATETIME"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>The time when the tweet was promoted.</annotation>
+    </column>
+    <column name="UpdatedAt" nullable="true">
+      <datatype name="TIMESTAMP" extendedName="TIMESTAMP" subType="DATASOURCE_TYPE" type="DATETIME"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>The time when the tweet was updated.</annotation>
+    </column>
+    <column name="Deleted" nullable="true">
+      <datatype name="BIT" extendedName="BIT" subType="DATASOURCE_TYPE" type="BOOLEAN"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>A boolean indicating if this item is deleted.</annotation>
+    </column>
+    <column name="EntityStatus" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(2000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="2000"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>The status for this entity: ACTIVE, DRAFT, and PAUSED.</annotation>
+    </column>
+    <column name="ApprovalStatus" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(2000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="2000"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>Indicates if this promotion is approved. </annotation>
+    </column>
+    <column name="IncludeDeleted" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(2000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="2000"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>Boolean used for including or not the deleted accounts.</annotation>
+    </column>
+  </columns>
+  <indexes>
+    <index name="ADPROMOTEDTWEETS_PRIMARYKEY" type="PRIMARY_KEY" unique="true">
+      <indexColumn name="Id" sortOrder="ASCENDING"/>
+    </index>
+  </indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="admin" domain="composite"/>
+  </security>
+  <attribute name="c:0:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:1:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:2:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:3:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:4:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:5:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:6:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:7:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:8:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:9:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="creationDate" type="LONG">1550474602902</attribute>
+  <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+  <attribute name="creatorUserId" type="INTEGER">-1973</attribute>
+  <attribute name="creatorUserName" type="STRING">admin</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1550474602902</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">composite</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">-1973</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">admin</attribute>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1550474602902</attribute>
+</metadata>

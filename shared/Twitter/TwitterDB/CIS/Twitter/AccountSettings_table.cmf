@@ -1,0 +1,159 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<metadata name="AccountSettings" path="/shared/Twitter/TwitterDB/CIS/Twitter/AccountSettings" type="TABLE" subtype="DATABASE_TABLE" changeToken="0" tableType="VIEW">
+  <annotation>AccountSettings</annotation>
+  <columns>
+    <column name="Screen_Name" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(50)" subType="DATASOURCE_TYPE" type="STRING" maxLength="50"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>The screen name of the currently authenticated user.</annotation>
+    </column>
+    <column name="Always_Use_Https" nullable="true">
+      <datatype name="BIT" extendedName="BIT" subType="DATASOURCE_TYPE" type="BOOLEAN"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>A boolean indicating if the user has specified in their user settings to always use HTTPS URLs.</annotation>
+    </column>
+    <column name="Discoverable_By_Email" nullable="true">
+      <datatype name="BIT" extendedName="BIT" subType="DATASOURCE_TYPE" type="BOOLEAN"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>A boolean indicating if the user can be found by email. This can be enabled in the &apos;let others find me by my email address&apos; check box.</annotation>
+    </column>
+    <column name="Discoverable_By_Mobile" nullable="true">
+      <datatype name="BIT" extendedName="BIT" subType="DATASOURCE_TYPE" type="BOOLEAN"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>A boolean indicating if the user can be found by their mobile number.</annotation>
+    </column>
+    <column name="Geo_Enabled" nullable="true">
+      <datatype name="BIT" extendedName="BIT" subType="DATASOURCE_TYPE" type="BOOLEAN"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>A boolean indicating if the user has enabled adding locations to their tweets.</annotation>
+    </column>
+    <column name="Language" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(2000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="2000"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>The default language code for the user. For example: en.</annotation>
+    </column>
+    <column name="Protected" nullable="true">
+      <datatype name="BIT" extendedName="BIT" subType="DATASOURCE_TYPE" type="BOOLEAN"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>A boolean indicating if the user has selected the Protect My Tweets setting.</annotation>
+    </column>
+    <column name="Show_All_Inline_Media" nullable="true">
+      <datatype name="BIT" extendedName="BIT" subType="DATASOURCE_TYPE" type="BOOLEAN"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>A boolean indicating if the user has enabled all media to be displayed in tweets.</annotation>
+    </column>
+    <column name="Sleep_Time_Enabled" nullable="true">
+      <datatype name="BIT" extendedName="BIT" subType="DATASOURCE_TYPE" type="BOOLEAN"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>A boolean indicating if the user has selected to turn off updates during certain hours if they have added a mobile phone to their account.</annotation>
+    </column>
+    <column name="Sleep_Time_Start_Time" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(2000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="2000"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>The start time for the range when Twitter updates will not be submitted to the user&apos;s mobile phone.</annotation>
+    </column>
+    <column name="Sleep_Time_End_Time" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(2000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="2000"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>An ending time for the range when Twitter updates will not be submitted to the user&apos;s mobile phone.</annotation>
+    </column>
+    <column name="Time_Zone_Name" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(2000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="2000"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>The name of the time zone the user is located in.</annotation>
+    </column>
+    <column name="Time_Zone_TZInfo_Name" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(2000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="2000"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>A more specific location for the time zone the user is located in.</annotation>
+    </column>
+    <column name="Time_Zone_Utc_Offset" nullable="true">
+      <datatype name="INT" extendedName="INT" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>The Coordinated Universal Time offset in seconds from GMT.</annotation>
+    </column>
+    <column name="Trend_Location" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(2000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="2000"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>An XML aggregate of trending locations for the user.</annotation>
+    </column>
+  </columns>
+  <indexes>
+    <index name="ACCOUNTSETTINGS_PRIMARYKEY" type="PRIMARY_KEY" unique="true">
+      <indexColumn name="Screen_Name" sortOrder="ASCENDING"/>
+    </index>
+  </indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="admin" domain="composite"/>
+  </security>
+  <attribute name="c:0:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:10:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:11:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:12:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:13:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:14:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:1:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:2:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:3:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:4:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:5:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:6:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:7:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:8:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:9:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="creationDate" type="LONG">1550474600193</attribute>
+  <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+  <attribute name="creatorUserId" type="INTEGER">-1973</attribute>
+  <attribute name="creatorUserName" type="STRING">admin</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1550474600193</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">composite</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">-1973</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">admin</attribute>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1550474600193</attribute>
+</metadata>

@@ -1,0 +1,56 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<metadata name="AdAvailableAudiences" path="/shared/Twitter/TwitterDB/CIS/Twitter/AdAvailableAudiences" type="TABLE" subtype="DATABASE_TABLE" changeToken="0" tableType="VIEW">
+  <annotation>AdAvailableAudiences</annotation>
+  <columns>
+    <column name="AccountId" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(2000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="2000"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>Id of the advertising account to work with.</annotation>
+    </column>
+    <column name="AudienceType" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(2000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="2000"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>A group which includes certain users based on location and activity. There are three types of audiences: ALL_ON_TWITTER is an audience type that includes all users in the United States. ORGANIC is an audience type that includes the set of users who have interacted with organic content belonging to the full promotable (primary) user of the ads account. CAMPAIGN is an audience type that includes the set of users who have interacted with past campaigns.</annotation>
+    </column>
+    <column name="InteractionTypes" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(2000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="2000"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>How the audience interacted with the ad. Your reached audience refers to users who are viewing your campaign, while your engaged audience includes the users who are actively engaging (responding to, favoriting, and retweeting) with your ads. Data on users who have converted in the past is available if the ads account has conversion tracking.</annotation>
+    </column>
+    <column name="AudienceValue" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(2000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="2000"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>The identifier (Id) of the available audience set requested. Availability depends on the AudienceType.</annotation>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="admin" domain="composite"/>
+  </security>
+  <attribute name="c:0:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:1:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:2:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:3:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="creationDate" type="LONG">1550474600207</attribute>
+  <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+  <attribute name="creatorUserId" type="INTEGER">-1973</attribute>
+  <attribute name="creatorUserName" type="STRING">admin</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1550474600207</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">composite</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">-1973</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">admin</attribute>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1550474600207</attribute>
+</metadata>

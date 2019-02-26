@@ -1,0 +1,650 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<metadata name="AdStats" path="/shared/Twitter/TwitterDB/CIS/Twitter/AdStats" type="TABLE" subtype="DATABASE_TABLE" changeToken="0" tableType="VIEW">
+  <annotation>AdStats</annotation>
+  <columns>
+    <column name="AccountId" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(2000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="2000"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>The Id of the advertising account to work with.</annotation>
+    </column>
+    <column name="Entity" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(2000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="2000"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>The entity to query.</annotation>
+    </column>
+    <column name="EntityId" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(2000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="2000"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>The Id of the entity to query.</annotation>
+    </column>
+    <column name="StartTime" nullable="true">
+      <datatype name="DATE" extendedName="DATE" subType="DATASOURCE_TYPE" type="DATE"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>Scopes the retrieved data to data collected in the window of time between StartTime and EndTime. Must be expressed in whole hours.</annotation>
+    </column>
+    <column name="EndTime" nullable="true">
+      <datatype name="DATE" extendedName="DATE" subType="DATASOURCE_TYPE" type="DATE"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>Scopes the retrieved data to data collected in the window of time between StartTime and EndTime. Must be expressed in whole hours.</annotation>
+    </column>
+    <column name="Placement" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(2000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="2000"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>The placement. Possible values: ALL_ON_TWITTER, PUBLISHER_NETWORK.</annotation>
+    </column>
+    <column name="Granularity" nullable="true">
+      <datatype name="VARCHAR" extendedName="VARCHAR(2000)" subType="DATASOURCE_TYPE" type="STRING" maxLength="2000"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>Determines how granular the data points will be returned within the time range specified by StartTime and EndTime. For instance, when set to HOUR, you will be presented with a datapoint for each hour between StartTime and EndTime. </annotation>
+    </column>
+    <column name="Engagements" nullable="true">
+      <datatype name="INT" extendedName="INT" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>Total number of engagements.</annotation>
+    </column>
+    <column name="Impressions" nullable="true">
+      <datatype name="INT" extendedName="INT" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>Total number of impressions.</annotation>
+    </column>
+    <column name="Retweets" nullable="true">
+      <datatype name="INT" extendedName="INT" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>Total number of retweets.</annotation>
+    </column>
+    <column name="Replies" nullable="true">
+      <datatype name="INT" extendedName="INT" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>Total number of replies.</annotation>
+    </column>
+    <column name="Likes" nullable="true">
+      <datatype name="INT" extendedName="INT" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>Total number of likes.</annotation>
+    </column>
+    <column name="Follows" nullable="true">
+      <datatype name="INT" extendedName="INT" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>Total number of follows.</annotation>
+    </column>
+    <column name="CardEngagements" nullable="true">
+      <datatype name="INT" extendedName="INT" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>Total number of card engagements.</annotation>
+    </column>
+    <column name="Clicks" nullable="true">
+      <datatype name="INT" extendedName="INT" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>Total number of clicks.</annotation>
+    </column>
+    <column name="AppClicks" nullable="true">
+      <datatype name="INT" extendedName="INT" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>Number of app install or app open attempts.</annotation>
+    </column>
+    <column name="UrlClicks" nullable="true">
+      <datatype name="INT" extendedName="INT" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>Number of clicks on linked URLs.</annotation>
+    </column>
+    <column name="QualifiedImpressions" nullable="true">
+      <datatype name="INT" extendedName="INT" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>Total number of qualified impressions.</annotation>
+    </column>
+    <column name="BilledEngagements" nullable="true">
+      <datatype name="INT" extendedName="INT" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>Total number of billed engagements.</annotation>
+    </column>
+    <column name="BilledCharge" nullable="true">
+      <datatype name="INT" extendedName="INT" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>Total spent in micros.</annotation>
+    </column>
+    <column name="VideoTotalViews" nullable="true">
+      <datatype name="INT" extendedName="INT" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>Total number of video views.</annotation>
+    </column>
+    <column name="VideoViews25" nullable="true">
+      <datatype name="INT" extendedName="INT" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>Total number of views where at least 25% of the video was viewed.</annotation>
+    </column>
+    <column name="VideoViews50" nullable="true">
+      <datatype name="INT" extendedName="INT" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>Total number of views where at least 50% of the video was viewed.</annotation>
+    </column>
+    <column name="VideoViews75" nullable="true">
+      <datatype name="INT" extendedName="INT" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>Total number of views where at least 75% of the video was viewed.</annotation>
+    </column>
+    <column name="VideoViews100" nullable="true">
+      <datatype name="INT" extendedName="INT" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>Total number of views where 100% of the video was viewed.</annotation>
+    </column>
+    <column name="VideoCTAClicks" nullable="true">
+      <datatype name="INT" extendedName="INT" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>Total clicks on the call to action.</annotation>
+    </column>
+    <column name="VideoContentStarts" nullable="true">
+      <datatype name="INT" extendedName="INT" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>Total number of video playback starts.</annotation>
+    </column>
+    <column name="VideoMrcViews" nullable="true">
+      <datatype name="INT" extendedName="INT" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>Total number of views according to Media Rating Council guidelines.</annotation>
+    </column>
+    <column name="Video3s100pctViews" nullable="true">
+      <datatype name="INT" extendedName="INT" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>Total number of views where at least 3 seconds were played while 100% in view.</annotation>
+    </column>
+    <column name="MediaViews" nullable="true">
+      <datatype name="INT" extendedName="INT" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>Total number of views (autoplay and click) of media across videos, vines, GIFs, and images.</annotation>
+    </column>
+    <column name="MediaEngagements" nullable="true">
+      <datatype name="INT" extendedName="INT" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>Total number of clicks of media across videos, vines, GIFs, and images.</annotation>
+    </column>
+    <column name="Purchases" nullable="true">
+      <datatype name="INT" extendedName="INT" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>Number of conversions of type PURCHASE and the corresponding sale amount and order quantity.</annotation>
+    </column>
+    <column name="SignUps" nullable="true">
+      <datatype name="INT" extendedName="INT" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>Number of conversions of type SIGN_UP and the corresponding sale amount and order quantity.</annotation>
+    </column>
+    <column name="SiteVisits" nullable="true">
+      <datatype name="INT" extendedName="INT" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>Number of conversions of type SITE_VISIT and the corresponding sale amount and order quantity.</annotation>
+    </column>
+    <column name="Downloads" nullable="true">
+      <datatype name="INT" extendedName="INT" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>Number of conversions of type DOWNLOAD and the corresponding sale amount and order quantity.</annotation>
+    </column>
+    <column name="ConversionCustom" nullable="true">
+      <datatype name="INT" extendedName="INT" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>Number of conversions of type CUSTOM and the corresponding sale amount and order quantity.</annotation>
+    </column>
+    <column name="MobileConversionSpentCredits" nullable="true">
+      <datatype name="INT" extendedName="INT" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>Breakdown of mobile conversions of type SPENT_CREDIT by post view, post engagement, whether assisted, order quantity, and sale amount.</annotation>
+    </column>
+    <column name="MobileConversionInstalls" nullable="true">
+      <datatype name="INT" extendedName="INT" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>Breakdown of mobile conversions of type INSTALL by post view, post engagement, whether assisted, order quantity, and sale amount.</annotation>
+    </column>
+    <column name="MobileConversionContentViews" nullable="true">
+      <datatype name="INT" extendedName="INT" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>Breakdown of mobile conversions of type CONTENT_VIEW by post view, post engagement, whether assisted, order quantity, and sale amount.</annotation>
+    </column>
+    <column name="MobileConversionAddToWishlists" nullable="true">
+      <datatype name="INT" extendedName="INT" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>Breakdown of mobile conversions of type ADD_TO_WISHLIST by post view, post engagement, whether assisted, order quantity, and sale amount.</annotation>
+    </column>
+    <column name="MobileConversionCheckoutsInitiated" nullable="true">
+      <datatype name="INT" extendedName="INT" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>Breakdown of mobile conversions of type CHECKOUT_INITIATED by post view, post engagement, whether assisted, order quantity, and sale amount.</annotation>
+    </column>
+    <column name="MobileConversionReservations" nullable="true">
+      <datatype name="INT" extendedName="INT" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>Breakdown of mobile conversions of type RESERVATION by post view, post engagement, whether assisted, order quantity, and sale amount.</annotation>
+    </column>
+    <column name="MobileConversionTutorialsCompleted" nullable="true">
+      <datatype name="INT" extendedName="INT" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>Breakdown of mobile conversions of type TUTORIAL_COMPLETED by post view, post engagement, whether assisted, order quantity, and sale amount.</annotation>
+    </column>
+    <column name="MobileConversionAchievementsUnlocked" nullable="true">
+      <datatype name="INT" extendedName="INT" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>Breakdown of mobile conversions of type ACHIEVEMENT_UNLOCKED by post view, post engagement, whether assisted, order quantity, and sale amount.</annotation>
+    </column>
+    <column name="MobileConversionSearches" nullable="true">
+      <datatype name="INT" extendedName="INT" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>Breakdown of mobile conversions of type SEARCH by post view, post engagement, whether assisted, order quantity, and sale amount.</annotation>
+    </column>
+    <column name="MobileConversionAddToCarts" nullable="true">
+      <datatype name="INT" extendedName="INT" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>Breakdown of mobile conversions of type ADD_TO_CART by post view, post engagement, whether assisted, order quantity, and sale amount.</annotation>
+    </column>
+    <column name="MobileConversionPaymentInfoAdditions" nullable="true">
+      <datatype name="INT" extendedName="INT" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>Breakdown of mobile conversions of type PAYMENT_INFO_ADDITION by post view, post engagement, whether assisted, order quantity, and sale amount.</annotation>
+    </column>
+    <column name="MobileConversionReEngages" nullable="true">
+      <datatype name="INT" extendedName="INT" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>Breakdown of mobile conversions of type RE_ENGAGE by post view, post engagement, whether assisted, order quantity, and sale amount.</annotation>
+    </column>
+    <column name="MobileConversionShares" nullable="true">
+      <datatype name="INT" extendedName="INT" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>Breakdown of mobile conversions of type SHARE by post view, post engagement, whether assisted, order quantity, and sale amount.</annotation>
+    </column>
+    <column name="MobileConversionRates" nullable="true">
+      <datatype name="INT" extendedName="INT" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>Breakdown of mobile conversions of type RATE by post view, post engagement, whether assisted, order quantity, and sale amount.</annotation>
+    </column>
+    <column name="MobileConversionLogins" nullable="true">
+      <datatype name="INT" extendedName="INT" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>Breakdown of mobile conversions of type LOGIN by post view, post engagement, whether assisted, order quantity, and sale amount.</annotation>
+    </column>
+    <column name="MobileConversionUpdates" nullable="true">
+      <datatype name="INT" extendedName="INT" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>Breakdown of mobile conversions of type UPDATE by post view, post engagement, whether assisted, order quantity, and sale amount.</annotation>
+    </column>
+    <column name="MobileConversionLevelsAchieved" nullable="true">
+      <datatype name="INT" extendedName="INT" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>Breakdown of mobile conversions of type LEVEL_ACHIEVED by post view, post engagement, whether assisted, order quantity, and sale amount.</annotation>
+    </column>
+    <column name="MobileConversionInvites" nullable="true">
+      <datatype name="INT" extendedName="INT" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>Breakdown of mobile conversions of type INVITE by post view, post engagement, whether assisted, order quantity, and sale amount.</annotation>
+    </column>
+    <column name="MobileConversionKeyPageViews" nullable="true">
+      <datatype name="INT" extendedName="INT" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>Breakdown of mobile conversions of type KEY_PAGE_VIEW by post view and post engagement.</annotation>
+    </column>
+    <column name="LifetimeValuePurchases" nullable="true">
+      <datatype name="INT" extendedName="INT" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>Breakdown of mobile conversions of type PURCHASE.</annotation>
+    </column>
+    <column name="LifetimeValueSignUps" nullable="true">
+      <datatype name="INT" extendedName="INT" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>Breakdown of mobile conversions of type SIGN_UP.</annotation>
+    </column>
+    <column name="LifetimeValueUpdates" nullable="true">
+      <datatype name="INT" extendedName="INT" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>Breakdown of mobile conversions of type UPDATE.</annotation>
+    </column>
+    <column name="LifetimeValueTutorialsCompleted" nullable="true">
+      <datatype name="INT" extendedName="INT" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>Breakdown of mobile conversions of type TUTORIAL_COMPLETED.</annotation>
+    </column>
+    <column name="LifetimeValueReservations" nullable="true">
+      <datatype name="INT" extendedName="INT" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>Breakdown of mobile conversions of type RESERVATION.</annotation>
+    </column>
+    <column name="LifetimeValueAddToCarts" nullable="true">
+      <datatype name="INT" extendedName="INT" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>Breakdown of mobile conversions of type ADD_TO_CART.</annotation>
+    </column>
+    <column name="LifetimeValueAddToWishlists" nullable="true">
+      <datatype name="INT" extendedName="INT" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>Breakdown of mobile conversions of type ADD_TO_WISHLIST.</annotation>
+    </column>
+    <column name="LifetimeValueCheckoutsInitiated" nullable="true">
+      <datatype name="INT" extendedName="INT" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>Breakdown of mobile conversions of type CHECKOUT_INITIATED.</annotation>
+    </column>
+    <column name="LifetimeValueLevelsAchieved" nullable="true">
+      <datatype name="INT" extendedName="INT" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>Breakdown of mobile conversions of type LEVEL_ACHIEVED.</annotation>
+    </column>
+    <column name="LifetimeValueAchievementsUnlocked" nullable="true">
+      <datatype name="INT" extendedName="INT" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>Breakdown of mobile conversions of type ACHIEVEMENT_UNLOCKED.</annotation>
+    </column>
+    <column name="LifetimeValueShares" nullable="true">
+      <datatype name="INT" extendedName="INT" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>Breakdown of mobile conversions of type SHARE.</annotation>
+    </column>
+    <column name="LifetimeValueInvites" nullable="true">
+      <datatype name="INT" extendedName="INT" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>Breakdown of mobile conversions of type INVITE.</annotation>
+    </column>
+    <column name="LifetimeValuePaymentInfoAdditions" nullable="true">
+      <datatype name="INT" extendedName="INT" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>Breakdown of mobile conversions of type PAYMENT_INFO_ADDITION.</annotation>
+    </column>
+    <column name="LifetimeValueSpentCredits" nullable="true">
+      <datatype name="INT" extendedName="INT" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>Breakdown of mobile conversions of type SPENT_CREDIT.</annotation>
+    </column>
+    <column name="LifetimeValueRates" nullable="true">
+      <datatype name="INT" extendedName="INT" subType="DATASOURCE_TYPE" type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <attribute name="mandatory" type="BOOLEAN">false</attribute>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+      <annotation>Breakdown of mobile conversions of type RATE.</annotation>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="admin" domain="composite"/>
+  </security>
+  <attribute name="c:0:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:10:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:11:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:12:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:13:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:14:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:15:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:16:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:17:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:18:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:19:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:1:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:20:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:21:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:22:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:23:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:24:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:25:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:26:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:27:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:28:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:29:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:2:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:30:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:31:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:32:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:33:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:34:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:35:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:36:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:37:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:38:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:39:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:3:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:40:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:41:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:42:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:43:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:44:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:45:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:46:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:47:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:48:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:49:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:4:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:50:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:51:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:52:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:53:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:54:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:55:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:56:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:57:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:58:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:59:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:5:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:60:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:61:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:62:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:63:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:64:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:65:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:66:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:67:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:68:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:69:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:6:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:7:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:8:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="c:9:mandatory" type="BOOLEAN">false</attribute>
+  <attribute name="creationDate" type="LONG">1550474602902</attribute>
+  <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+  <attribute name="creatorUserId" type="INTEGER">-1973</attribute>
+  <attribute name="creatorUserName" type="STRING">admin</attribute>
+  <attribute name="lastModifiedDate" type="LONG">1550474602902</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">composite</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">-1973</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">admin</attribute>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1550474602902</attribute>
+</metadata>

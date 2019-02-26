@@ -1,0 +1,281 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<metadata name="L1" path="/shared/Twitter/Views/L1" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="ID" nullable="true">
+      <datatype type="STRING" maxLength="30"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="Text" nullable="true">
+      <datatype type="STRING" maxLength="2000"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="Lang" nullable="true">
+      <datatype type="STRING" maxLength="2000"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="Source" nullable="true">
+      <datatype type="STRING" maxLength="2000"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="Favorited" nullable="true">
+      <datatype type="BOOLEAN"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="Favorite_Count" nullable="true">
+      <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="Retweeted_Status_Id" nullable="true">
+      <datatype type="STRING" maxLength="2000"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="Place_Country" nullable="true">
+      <datatype type="STRING" maxLength="2000"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="From_User_Id" nullable="true">
+      <datatype type="STRING" maxLength="2000"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="From_User_Screen_Name" nullable="true">
+      <datatype type="STRING" maxLength="2000"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="From_User_Name" nullable="true">
+      <datatype type="STRING" maxLength="2000"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="From_User_Location" nullable="true">
+      <datatype type="STRING" maxLength="2000"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="From_User_Profile_URL" nullable="true">
+      <datatype type="STRING" maxLength="2000"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="From_User_Profile_Image_Url" nullable="true">
+      <datatype type="STRING" maxLength="2000"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="admin" domain="composite"/>
+  </security>
+  <dependency target="/shared/Twitter/TwitterDB/CIS/Twitter/Tweets" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="ID">
+        <datatype type="STRING" maxLength="30"/>
+      </element>
+      <element name="IDLong">
+        <datatype type="INTEGER"/>
+      </element>
+      <element name="SearchTerms">
+        <datatype type="STRING" maxLength="200"/>
+      </element>
+      <element name="Created_At">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="Text">
+        <datatype type="STRING" maxLength="2000"/>
+      </element>
+      <element name="Lang">
+        <datatype type="STRING" maxLength="2000"/>
+      </element>
+      <element name="Source">
+        <datatype type="STRING" maxLength="2000"/>
+      </element>
+      <element name="Favorited">
+        <datatype type="BOOLEAN"/>
+      </element>
+      <element name="Favorite_Count">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="Retweeted">
+        <datatype type="BOOLEAN"/>
+      </element>
+      <element name="Retweet_Count">
+        <datatype type="INTEGER" minValue="-2147483648" maxValue="2147483647"/>
+      </element>
+      <element name="Retweeted_Status_Id">
+        <datatype type="STRING" maxLength="2000"/>
+      </element>
+      <element name="Truncated">
+        <datatype type="BOOLEAN"/>
+      </element>
+      <element name="Filter_Level">
+        <datatype type="STRING" maxLength="2000"/>
+      </element>
+      <element name="Possibly_Sensitive">
+        <datatype type="STRING" maxLength="2000"/>
+      </element>
+      <element name="Withheld_Copyright">
+        <datatype type="BOOLEAN"/>
+      </element>
+      <element name="Withheld_Scope">
+        <datatype type="STRING" maxLength="2000"/>
+      </element>
+      <element name="Withheld_In_Countries">
+        <datatype type="STRING" maxLength="2000"/>
+      </element>
+      <element name="Contributors">
+        <datatype type="STRING" maxLength="5000"/>
+      </element>
+      <element name="Coordinates_Coordinates">
+        <datatype type="STRING" maxLength="2000"/>
+      </element>
+      <element name="Coordinates_Type">
+        <datatype type="STRING" maxLength="2000"/>
+      </element>
+      <element name="Place_Full_Name">
+        <datatype type="STRING" maxLength="2000"/>
+      </element>
+      <element name="Place_Country">
+        <datatype type="STRING" maxLength="2000"/>
+      </element>
+      <element name="Current_User_Retweet_Id">
+        <datatype type="STRING" maxLength="2000"/>
+      </element>
+      <element name="Scopes">
+        <datatype type="STRING" maxLength="2000"/>
+      </element>
+      <element name="In_Reply_To_Status_Id">
+        <datatype type="STRING" maxLength="2000"/>
+      </element>
+      <element name="From_User_Id">
+        <datatype type="STRING" maxLength="2000"/>
+      </element>
+      <element name="From_User_Screen_Name">
+        <datatype type="STRING" maxLength="2000"/>
+      </element>
+      <element name="From_User_Name">
+        <datatype type="STRING" maxLength="2000"/>
+      </element>
+      <element name="From_User_Location">
+        <datatype type="STRING" maxLength="2000"/>
+      </element>
+      <element name="From_User_Profile_URL">
+        <datatype type="STRING" maxLength="2000"/>
+      </element>
+      <element name="From_User_Profile_Image_Url">
+        <datatype type="STRING" maxLength="2000"/>
+      </element>
+      <element name="To_User_Id">
+        <datatype type="STRING" maxLength="2000"/>
+      </element>
+      <element name="To_User_Screen_Name">
+        <datatype type="STRING" maxLength="2000"/>
+      </element>
+      <element name="User_Mentions">
+        <datatype type="STRING" maxLength="5000"/>
+      </element>
+      <element name="URLs">
+        <datatype type="STRING" maxLength="5000"/>
+      </element>
+      <element name="Hashtags">
+        <datatype type="STRING" maxLength="5000"/>
+      </element>
+      <element name="NextPageToken">
+        <datatype type="STRING" maxLength="2000"/>
+      </element>
+      <element name="Min_ID">
+        <datatype type="STRING" maxLength="2000"/>
+      </element>
+      <element name="Max_ID">
+        <datatype type="STRING" maxLength="2000"/>
+      </element>
+      <element name="Include_Entities">
+        <datatype type="STRING" maxLength="2000"/>
+      </element>
+      <element name="Include_Retweets">
+        <datatype type="STRING" maxLength="2000"/>
+      </element>
+      <element name="Result_Type">
+        <datatype type="STRING" maxLength="2000"/>
+      </element>
+      <element name="List_Id">
+        <datatype type="STRING" maxLength="2000"/>
+      </element>
+      <element name="Slug">
+        <datatype type="STRING" maxLength="2000"/>
+      </element>
+      <element name="Owner_User_Id">
+        <datatype type="STRING" maxLength="2000"/>
+      </element>
+      <element name="Owner_Screen_Name">
+        <datatype type="STRING" maxLength="2000"/>
+      </element>
+      <element name="Geocode">
+        <datatype type="STRING" maxLength="2000"/>
+      </element>
+      <element name="RetweetId">
+        <datatype type="STRING" maxLength="2000"/>
+      </element>
+      <element name="MediaId">
+        <datatype type="STRING" maxLength="2000"/>
+      </element>
+      <element name="MediaFilePath">
+        <datatype type="STRING" maxLength="2000"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">SELECT 
+    Tweets.ID, 
+    Tweets.Text, 
+    Tweets.Lang, 
+    Tweets.Source, 
+    Tweets.Favorited, 
+    Tweets.Favorite_Count, 
+    Tweets.Retweeted_Status_Id, 
+    Tweets.Place_Country, 
+    Tweets.From_User_Id, 
+    Tweets.From_User_Screen_Name, 
+    Tweets.From_User_Name, 
+    Tweets.From_User_Location, 
+    Tweets.From_User_Profile_URL, 
+    Tweets.From_User_Profile_Image_Url
+FROM      
+    /shared/Twitter/TwitterDB/CIS/Twitter/Tweets Tweets</attribute>
+  <attribute name="creationDate" type="LONG">1550474635153</attribute>
+  <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+  <attribute name="creatorUserId" type="INTEGER">-1973</attribute>
+  <attribute name="creatorUserName" type="STRING">admin</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="impactLevel" type="INTEGER">0</attribute>
+  <attribute name="impactMessage" type="NULL"/>
+  <attribute name="lastModifiedDate" type="LONG">1550562240794</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">composite</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">-1973</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">admin</attribute>
+  <attribute name="model" type="NULL"/>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1550474635153</attribute>
+</metadata>

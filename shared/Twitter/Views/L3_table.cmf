@@ -1,0 +1,256 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<metadata name="L3" path="/shared/Twitter/Views/L3" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="ID" nullable="true">
+      <datatype type="STRING" maxLength="100"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="Date" nullable="true">
+      <datatype type="DATETIME"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="Topic" nullable="true">
+      <datatype type="STRING" maxLength="2000"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="WoeId" nullable="true">
+      <datatype type="STRING" maxLength="2000"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="Country" nullable="true">
+      <datatype type="STRING" maxLength="2000"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="CountryCode" nullable="true">
+      <datatype type="STRING" maxLength="2000"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="Latitude" nullable="true">
+      <datatype type="STRING" maxLength="2000"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="Longitude" nullable="true">
+      <datatype type="STRING" maxLength="2000"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="Search_Terms" nullable="true">
+      <datatype type="STRING" maxLength="2000"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="Events" nullable="true">
+      <datatype type="STRING" maxLength="2000"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="Url" nullable="true">
+      <datatype type="STRING" maxLength="2000"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="Promoted_Content" nullable="true">
+      <datatype type="STRING" maxLength="2000"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="admin" domain="composite"/>
+  </security>
+  <dependency target="/shared/Twitter/TwitterDB/CIS/Twitter/Trends" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="ID">
+        <datatype type="STRING" maxLength="100"/>
+      </element>
+      <element name="Date">
+        <datatype type="DATETIME"/>
+      </element>
+      <element name="Topic">
+        <datatype type="STRING" maxLength="2000"/>
+      </element>
+      <element name="WoeId">
+        <datatype type="STRING" maxLength="2000"/>
+      </element>
+      <element name="Country">
+        <datatype type="STRING" maxLength="2000"/>
+      </element>
+      <element name="CountryCode">
+        <datatype type="STRING" maxLength="2000"/>
+      </element>
+      <element name="Latitude">
+        <datatype type="STRING" maxLength="2000"/>
+      </element>
+      <element name="Longitude">
+        <datatype type="STRING" maxLength="2000"/>
+      </element>
+      <element name="Search_Terms">
+        <datatype type="STRING" maxLength="2000"/>
+      </element>
+      <element name="Events">
+        <datatype type="STRING" maxLength="2000"/>
+      </element>
+      <element name="Url">
+        <datatype type="STRING" maxLength="2000"/>
+      </element>
+      <element name="Promoted_Content">
+        <datatype type="STRING" maxLength="2000"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">SELECT 
+    Trends.ID, 
+    Trends.&quot;Date&quot;, 
+    Trends.Topic, 
+    Trends.WoeId, 
+    Trends.Country, 
+    Trends.CountryCode, 
+    Trends.Latitude, 
+    Trends.Longitude, 
+    Trends.Search_Terms, 
+    Trends.Events, 
+    Trends.Url, 
+    Trends.Promoted_Content
+FROM      
+    /shared/Twitter/TwitterDB/CIS/Twitter/Trends Trends</attribute>
+  <attribute name="creationDate" type="LONG">1550561340143</attribute>
+  <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+  <attribute name="creatorUserId" type="INTEGER">-1973</attribute>
+  <attribute name="creatorUserName" type="STRING">admin</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="impactLevel" type="INTEGER">0</attribute>
+  <attribute name="impactMessage" type="NULL"/>
+  <attribute name="lastModifiedDate" type="LONG">1550561582994</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">composite</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">-1973</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">admin</attribute>
+  <attribute name="model" type="BYTE_ARRAY">EIEJBAAAAAEQUQYBAAYAVAByAGUAbgBkAHMGAgAGAFQAcgBlAG4AZABzAwv/////AwoAAKFdAwz/
+////CxEABgAGAHMAaABhAHIAZQBkAAcAVAB3AGkAdAB0AGUAcgAJAFQAdwBpAHQAdABlAHIARABC
+AAMAQwBJAFMABwBUAHcAaQB0AHQAZQByAAYAVAByAGUAbgBkAHP//wMFAAAAAAgCEDEGAf//AQIB
+AQYAAQMAAQQAAQUAAwcAAAAABwkAAAABAAAAAAkKAAAADBBBBgEAAgBJAEQGAgAABgP//wYE//8D
+Cv////8IDBAbBgIABwBWAEEAUgBDAEgAQQBSBgMADABWAEEAUgBDAEgAQQBSACgAMQAwADAAKQMr
+AAAADwMSAAAAAQQEAAAAAAAAAGQBEwH//wMLAAAAAP//EEEGAQAEAEQAYQB0AGUGAgAABgP//wYE
+//8DCv////8IDBAWBgIACQBUAEkATQBFAFMAVABBAE0AUAYDAAkAVABJAE0ARQBTAFQAQQBNAFAD
+KwAAAA8DEgAAAAH//wMLAAAAAP//EEEGAQAFAFQAbwBwAGkAYwYCAAAGA///BgT//wMK/////wgM
+EBsGAgAHAFYAQQBSAEMASABBAFIGAwANAFYAQQBSAEMASABBAFIAKAAyADAAMAAwACkDKwAAAA8D
+EgAAAAEEBAAAAAAAAAfQARMB//8DCwAAAAD//xBBBgEABQBXAG8AZQBJAGQGAgAABgP//wYE//8D
+Cv////8IDBAbBgIABwBWAEEAUgBDAEgAQQBSBgMADQBWAEEAUgBDAEgAQQBSACgAMgAwADAAMAAp
+AysAAAAPAxIAAAABBAQAAAAAAAAH0AETAf//AwsAAAAA//8QQQYBAAcAQwBvAHUAbgB0AHIAeQYC
+AAAGA///BgT//wMK/////wgMEBsGAgAHAFYAQQBSAEMASABBAFIGAwANAFYAQQBSAEMASABBAFIA
+KAAyADAAMAAwACkDKwAAAA8DEgAAAAEEBAAAAAAAAAfQARMB//8DCwAAAAD//xBBBgEACwBDAG8A
+dQBuAHQAcgB5AEMAbwBkAGUGAgAABgP//wYE//8DCv////8IDBAbBgIABwBWAEEAUgBDAEgAQQBS
+BgMADQBWAEEAUgBDAEgAQQBSACgAMgAwADAAMAApAysAAAAPAxIAAAABBAQAAAAAAAAH0AETAf//
+AwsAAAAA//8QQQYBAAgATABhAHQAaQB0AHUAZABlBgIAAAYD//8GBP//Awr/////CAwQGwYCAAcA
+VgBBAFIAQwBIAEEAUgYDAA0AVgBBAFIAQwBIAEEAUgAoADIAMAAwADAAKQMrAAAADwMSAAAAAQQE
+AAAAAAAAB9ABEwH//wMLAAAAAP//EEEGAQAJAEwAbwBuAGcAaQB0AHUAZABlBgIAAAYD//8GBP//
+Awr/////CAwQGwYCAAcAVgBBAFIAQwBIAEEAUgYDAA0AVgBBAFIAQwBIAEEAUgAoADIAMAAwADAA
+KQMrAAAADwMSAAAAAQQEAAAAAAAAB9ABEwH//wMLAAAAAP//EEEGAQAMAFMAZQBhAHIAYwBoAF8A
+VABlAHIAbQBzBgIAAAYD//8GBP//Awr/////CAwQGwYCAAcAVgBBAFIAQwBIAEEAUgYDAA0AVgBB
+AFIAQwBIAEEAUgAoADIAMAAwADAAKQMrAAAADwMSAAAAAQQEAAAAAAAAB9ABEwH//wMLAAAAAP//
+EEEGAQAGAEUAdgBlAG4AdABzBgIAAAYD//8GBP//Awr/////CAwQGwYCAAcAVgBBAFIAQwBIAEEA
+UgYDAA0AVgBBAFIAQwBIAEEAUgAoADIAMAAwADAAKQMrAAAADwMSAAAAAQQEAAAAAAAAB9ABEwH/
+/wMLAAAAAP//EEEGAQADAFUAcgBsBgIAAAYD//8GBP//Awr/////CAwQGwYCAAcAVgBBAFIAQwBI
+AEEAUgYDAA0AVgBBAFIAQwBIAEEAUgAoADIAMAAwADAAKQMrAAAADwMSAAAAAQQEAAAAAAAAB9AB
+EwH//wMLAAAAAP//EEEGAQAQAFAAcgBvAG0AbwB0AGUAZABfAEMAbwBuAHQAZQBuAHQGAgAABgP/
+/wYE//8DCv////8IDBAbBgIABwBWAEEAUgBDAEgAQQBSBgMADQBWAEEAUgBDAEgAQQBSACgAMgAw
+ADAAMAApAysAAAAPAxIAAAABBAQAAAAAAAAH0AETAf//AwsAAAAA/////wkGAAAAARCCAwoAAAEv
+AwsAAAByAwwAAADIAw0AAADI//8IAxBxAwEAAAALAwIAAABACQMAAALAEHQDBgAAAAD//xByBgT/
+////EHMDBQAAAAD//xB1AQcB//8QeAYL/////xB3Awr///////8QeQYM/////xB2//8Qdv//EHb/
+/xB2//8QdAMGAAAAAf//EHIGBP////8QcwMFAAAAAP//EHUBBwH//xB4Bgv/////EHcDCv//////
+/xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0AwYAAAAC//8QcgYE/////xBzAwUAAAAA//8QdQEH
+Af//EHgGC/////8QdwMK////////EHkGDP////8Qdv//EHb//xB2//8Qdv//EHQDBgAAAAP//xBy
+BgT/////EHMDBQAAAAD//xB1AQcB//8QeAYL/////xB3Awr///////8QeQYM/////xB2//8Qdv//
+EHb//xB2//8QdAMGAAAABP//EHIGBP////8QcwMFAAAAAP//EHUBBwH//xB4Bgv/////EHcDCv//
+/////xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0AwYAAAAF//8QcgYE/////xBzAwUAAAAA//8Q
+dQEHAf//EHgGC/////8QdwMK////////EHkGDP////8Qdv//EHb//xB2//8Qdv//EHQDBgAAAAb/
+/xByBgT/////EHMDBQAAAAD//xB1AQcB//8QeAYL/////xB3Awr///////8QeQYM/////xB2//8Q
+dv//EHb//xB2//8QdAMGAAAAB///EHIGBP////8QcwMFAAAAAP//EHUBBwH//xB4Bgv/////EHcD
+Cv///////xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0AwYAAAAI//8QcgYE/////xBzAwUAAAAA
+//8QdQEHAf//EHgGC/////8QdwMK////////EHkGDP////8Qdv//EHb//xB2//8Qdv//EHQDBgAA
+AAn//xByBgT/////EHMDBQAAAAD//xB1AQcB//8QeAYL/////xB3Awr///////8QeQYM/////xB2
+//8Qdv//EHb//xB2//8QdAMGAAAACv//EHIGBP////8QcwMFAAAAAP//EHUBBwH//xB4Bgv/////
+EHcDCv///////xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0AwYAAAAL//8QcgYE/////xBzAwUA
+AAAA//8QdQEHAf//EHgGC/////8QdwMK////////EHkGDP////8Qdv//EHb//xB2//8Qdv//EHT/
+/xByBgT/////EHP//xB1AQcA//8QeAYL/////xB3Awr///////8QeQYM/////xB2//8Qdv//EHb/
+/xB2//8QdP//EHIGBP////8Qc///EHUBBwD//xB4Bgv/////EHcDCv///////xB5Bgz/////EHb/
+/xB2//8Qdv//EHb//xB0//8QcgYE/////xBz//8QdQEHAP//EHgGC/////8QdwMK////////EHkG
+DP////8Qdv//EHb//xB2//8Qdv//EHT//xByBgT/////EHP//xB1AQcA//8QeAYL/////xB3Awr/
+//////8QeQYM/////xB2//8Qdv//EHb//xB2//8QdP//EHIGBP////8Qc///EHUBBwD//xB4Bgv/
+////EHcDCv///////xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0//8QcgYE/////xBz//8QdQEH
+AP//EHgGC/////8QdwMK////////EHkGDP////8Qdv//EHb//xB2//8Qdv//EHT//xByBgT/////
+EHP//xB1AQcA//8QeAYL/////xB3Awr///////8QeQYM/////xB2//8Qdv//EHb//xB2//8QdP//
+EHIGBP////8Qc///EHUBBwD//xB4Bgv/////EHcDCv///////xB5Bgz/////EHb//xB2//8Qdv//
+EHb//xB0//8QcgYE/////xBz//8QdQEHAP//EHgGC/////8QdwMK////////EHkGDP////8Qdv//
+EHb//xB2//8Qdv//EHT//xByBgT/////EHP//xB1AQcA//8QeAYL/////xB3Awr///////8QeQYM
+/////xB2//8Qdv//EHb//xB2//8QdP//EHIGBP////8Qc///EHUBBwD//xB4Bgv/////EHcDCv//
+/////xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0//8QcgYE/////xBz//8QdQEHAP//EHgGC///
+//8QdwMK////////EHkGDP////8Qdv//EHb//xB2//8Qdv//EHT//xByBgT/////EHP//xB1AQcA
+//8QeAYL/////xB3Awr///////8QeQYM/////xB2//8Qdv//EHb//xB2//8QdP//EHIGBP////8Q
+c///EHUBBwD//xB4Bgv/////EHcDCv///////xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0//8Q
+cgYE/////xBz//8QdQEHAP//EHgGC/////8QdwMK////////EHkGDP////8Qdv//EHb//xB2//8Q
+dv//EHT//xByBgT/////EHP//xB1AQcA//8QeAYL/////xB3Awr///////8QeQYM/////xB2//8Q
+dv//EHb//xB2//8QdP//EHIGBP////8Qc///EHUBBwD//xB4Bgv/////EHcDCv///////xB5Bgz/
+////EHb//xB2//8Qdv//EHb//xB0//8QcgYE/////xBz//8QdQEHAP//EHgGC/////8QdwMK////
+////EHkGDP////8Qdv//EHb//xB2//8Qdv//EHT//xByBgT/////EHP//xB1AQcA//8QeAYL////
+/xB3Awr///////8QeQYM/////xB2//8Qdv//EHb//xB2//8QdP//EHIGBP////8Qc///EHUBBwD/
+/xB4Bgv/////EHcDCv///////xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0//8QcgYE/////xBz
+//8QdQEHAP//EHgGC/////8QdwMK////////EHkGDP////8Qdv//EHb//xB2//8Qdv//EHT//xBy
+BgT/////EHP//xB1AQcA//8QeAYL/////xB3Awr///////8QeQYM/////xB2//8Qdv//EHb//xB2
+//8QdP//EHIGBP////8Qc///EHUBBwD//xB4Bgv/////EHcDCv///////xB5Bgz/////EHb//xB2
+//8Qdv//EHb//xB0//8QcgYE/////xBz//8QdQEHAP//EHgGC/////8QdwMK////////EHkGDP//
+//8Qdv//EHb//xB2//8Qdv//EHT//xByBgT/////EHP//xB1AQcA//8QeAYL/////xB3Awr/////
+//8QeQYM/////xB2//8Qdv//EHb//xB2//8QdP//EHIGBP////8Qc///EHUBBwD//xB4Bgv/////
+EHcDCv///////xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0//8QcgYE/////xBz//8QdQEHAP//
+EHgGC/////8QdwMK////////EHkGDP////8Qdv//EHb//xB2//8Qdv//EHT//xByBgT/////EHP/
+/xB1AQcA//8QeAYL/////xB3Awr///////8QeQYM/////xB2//8Qdv//EHb//xB2//8QdP//EHIG
+BP////8Qc///EHUBBwD//xB4Bgv/////EHcDCv///////xB5Bgz/////EHb//xB2//8Qdv//EHb/
+/xB0//8QcgYE/////xBz//8QdQEHAP//EHgGC/////8QdwMK////////EHkGDP////8Qdv//EHb/
+/xB2//8Qdv//EHT//xByBgT/////EHP//xB1AQcA//8QeAYL/////xB3Awr///////8QeQYM////
+/xB2//8Qdv//EHb//xB2//8QdP//EHIGBP////8Qc///EHUBBwD//xB4Bgv/////EHcDCv//////
+/xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0//8QcgYE/////xBz//8QdQEHAP//EHgGC/////8Q
+dwMK////////EHkGDP////8Qdv//EHb//xB2//8Qdv//EHT//xByBgT/////EHP//xB1AQcA//8Q
+eAYL/////xB3Awr///////8QeQYM/////xB2//8Qdv//EHb//xB2//8QdP//EHIGBP////8Qc///
+EHUBBwD//xB4Bgv/////EHcDCv///////xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0//8QcgYE
+/////xBz//8QdQEHAP//EHgGC/////8QdwMK////////EHkGDP////8Qdv//EHb//xB2//8Qdv//
+EHT//xByBgT/////EHP//xB1AQcA//8QeAYL/////xB3Awr///////8QeQYM/////xB2//8Qdv//
+EHb//xB2//8QdP//EHIGBP////8Qc///EHUBBwD//xB4Bgv/////EHcDCv///////xB5Bgz/////
+EHb//xB2//8Qdv//EHb//xB0//8QcgYE/////xBz//8QdQEHAP//EHgGC/////8QdwMK////////
+EHkGDP////8Qdv//EHb//xB2//8Qdv//EHT//xByBgT/////EHP//xB1AQcA//8QeAYL/////xB3
+Awr///////8QeQYM/////xB2//8Qdv//EHb//xB2//8QdP//EHIGBP////8Qc///EHUBBwD//xB4
+Bgv/////EHcDCv///////xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0//8QcgYE/////xBz//8Q
+dQEHAP//EHgGC/////8QdwMK////////EHkGDP////8Qdv//EHb//xB2//8Qdv//EHT//xByBgT/
+////EHP//xB1AQcA//8QeAYL/////xB3Awr///////8QeQYM/////xB2//8Qdv//EHb//xB2//8Q
+dP//EHIGBP////8Qc///EHUBBwD//xB4Bgv/////EHcDCv///////xB5Bgz/////EHb//xB2//8Q
+dv//EHb//xB0//8QcgYE/////xBz//8QdQEHAP//EHgGC/////8QdwMK////////EHkGDP////8Q
+dv//EHb//xB2//8Qdv//EHT//xByBgT/////EHP//xB1AQcA//8QeAYL/////xB3Awr///////8Q
+eQYM/////xB2//8Qdv//EHb//xB2//8QdP//EHIGBP////8Qc///EHUBBwD//xB4Bgv/////EHcD
+Cv///////xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0//8QcgYE/////xBz//8QdQEHAP//EHgG
+C/////8QdwMK////////EHkGDP////8Qdv//EHb//xB2//8Qdv//EHT//xByBgT/////EHP//xB1
+AQcA//8QeAYL/////xB3Awr///////8QeQYM/////xB2//8Qdv//EHb//xB2//8QdP//EHIGBP//
+//8Qc///EHUBBwD//xB4Bgv/////EHcDCv///////xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0
+//8QcgYE/////xBz//8QdQEHAP//EHgGC/////8QdwMK////////EHkGDP////8Qdv//EHb//xB2
+//8Qdv//EHT//xByBgT/////EHP//xB1AQcA//8QeAYL/////xB3Awr///////8QeQYM/////xB2
+//8Qdv//EHb//xB2////////</attribute>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1550561340143</attribute>
+</metadata>
